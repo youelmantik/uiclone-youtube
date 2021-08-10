@@ -1,0 +1,419 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  box-sizing: border-box;
+  width: 100vw;
+  background-color: #181818;
+}
+
+/* ------ Style for Header ------ */
+.header {
+  z-index: 100;
+  box-sizing: border-box;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  background-color: #212121;
+  opacity: 0.8;
+  position: fixed;
+  padding: 0.8rem 2rem;
+}
+.left {
+  width: 20%;
+  display: flex;
+  align-items: center;
+}
+.nav {
+  cursor: pointer;
+  color: white;
+}
+.logo {
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.logo img {
+  width: 2rem;
+}
+.logo span {
+  margin-left: 2px;
+  font-family: roboto;
+  font-weight: 500;
+  color: white;
+  font-size: 1rem;
+}
+.search {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mic {
+  color: white;
+  margin-left: 20px;
+}
+.search input {
+  width: 70%;
+  background-color: #121212;
+  padding: 0.6rem;
+  border-style: solid;
+  border-color: #313131;
+  border-width: 1px;
+  border-radius: 3px;
+  z-index: 10;
+}
+.search input:focus {
+  outline: 0.5px solid rgb(29, 132, 250);
+}
+.button-search {
+  text-align: center;
+  background-color: #313131;
+  width: 50px;
+  padding: 0.6rem;
+  cursor: pointer;
+}
+.button-search a {
+  text-decoration: none;
+  color: rgb(114, 114, 114);
+}
+.tools {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.tools a {
+  color: white;
+  margin-right: 2rem;
+}
+.thumbnail {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.thumbnail img {
+  width: 100px;
+}
+
+/* ------ Style for Left Menu ------ */
+.left-menu {
+  margin-top: 10vh;
+  position: fixed;
+  width: 18%;
+  height: 90vh;
+  background-color: #212121;
+  opacity: 0.8;
+  padding-top: 0.1rem;
+}
+.container-menu {
+  width: 99%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.menu {
+  width: 100%;
+  cursor: pointer;
+  padding: 0.8rem 2rem;
+  color: white;
+}
+.menu:hover {
+  background-color: #313131;
+}
+.menu i {
+  width: 25px;
+  color: #909090 !important;
+}
+.menu span {
+  margin-left: 1rem;
+  font-family: roboto;
+  font-weight: 400;
+}
+.line {
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+  width: 100%;
+  height: 2px;
+  background-color: #313131;
+}
+
+/* ----- Section Menu ------ */
+.section-menu {
+  box-sizing: border-box;
+  width: 100%;
+  height: 20vh;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.section-menu.subscriptions-menu {
+  height: 19vh;
+}
+.section-menu.more {
+  height: auto;
+}
+.show-list {
+  width: 100%;
+  cursor: pointer;
+  padding: 0.8rem 2rem;
+  color: white;
+}
+.show-list:hover {
+  background-color: #313131;
+}
+.show-list i {
+  width: 25px;
+  color: #909090 !important;
+}
+.show-list i:before {
+  content: "\f063";
+  font-family: fontawesome;
+  font-style: normal;
+}
+.show-list span {
+  margin-left: 1.6rem;
+  font-family: roboto;
+  font-weight: 400;
+}
+.show-list.more i:before {
+  content: "\f062";
+  font-family: fontawesome;
+}
+
+/* ------ Section Menu Subscriptions ------ */
+
+.subs {
+  font-family: roboto;
+  font-weight: 700;
+  color: #909090;
+  padding: 0.4rem 2rem;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+/* -------- Edit Left Menu Scrollbar -------- */
+.container-menu::-webkit-scrollbar {
+  width: 0.6rem !important;
+}
+.container-menu::-webkit-scrollbar-thumb {
+  background: #909090;
+  border-radius: 10px;
+}
+
+/* ----- Edit for small menu -------- */
+.small.active .menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  padding: 1rem 0;
+  color: #909090;
+}
+.section-menu.hide {
+  display: none;
+}
+.small.active .menu i {
+  margin-bottom: 0.8rem;
+}
+.small.active .menu span {
+  font-size: 0.6rem;
+  margin: 0;
+}
+.left-menu.small-menu {
+  width: 5.5%;
+}
+.left-menu.small-menu .container-menu {
+  width: 100%;
+}
+.left-menu.small-menu .show-list,
+.left-menu.small-menu .subs,
+.left-menu.small-menu .line {
+  display: none;
+}
+.menu.active,
+.menu.active span,
+.menu.active i {
+  background-color: #313131;
+  color: white !important;
+}
+
+/* ---- Style for Content - Tags ---- */
+.body {
+  box-sizing: border-box;
+  flex-direction: column;
+  display: flex;
+  position: fixed;
+  width: 82%;
+  height: 10vh;
+  margin-top: 10vh;
+  margin-left: 18vw;
+  background-color: #212121;
+  opacity: 0.8;
+  padding: 0 0.5rem;
+  overflow: hidden;
+  border-top: 1px solid #313131;
+  border-bottom: 1px solid #313131;
+}
+.body.small-menu {
+  width: 94.5%;
+  margin-left: 5.5vw;
+}
+.body-tag {
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  background-color: #212121;
+  height: 100%;
+  align-items: center;
+  overflow-x: scroll;
+  padding: 0.2rem 1rem;
+  /* cursor: move; */
+}
+.body-tag::-webkit-scrollbar {
+  display: none;
+}
+.btn-left {
+  position: absolute;
+  z-index: 100;
+  box-sizing: border-box;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #212121;
+  color: rgb(223, 223, 223);
+  padding: 0.5rem;
+  margin-left: -10px;
+  width: 70px;
+  height: 10vh;
+  opacity: 98%;
+  box-shadow: 20px 0 50px 20px rgba(32, 32, 32, 0.9);
+}
+.btn-right {
+  position: absolute;
+  box-sizing: border-box;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #212121;
+  color: rgb(223, 223, 223);
+  margin-left: 93%;
+  /* margin-left: 200px; */
+  padding: 0.5rem;
+  width: 70px;
+  height: 100%;
+  opacity: 95%;
+  box-shadow: -30px 0 50px 20px rgba(32, 32, 32, 0.9);
+}
+.tags {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 60%;
+}
+.tags input {
+  display: none;
+}
+.tags .label {
+  background-color: #313131;
+  border-radius: 100px;
+  padding: 0.5rem;
+  margin: 0 0.5rem;
+  color: rgb(223, 223, 223);
+  font-family: roboto;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.tags label:hover {
+  background-color: #505050;
+}
+.tags input[type="radio"]:checked + .label {
+  background-color: #c8c8c8;
+  color: #313131;
+}
+
+/* ----- Content ----- */
+.content {
+  box-sizing: border-box;
+  padding: 1rem;
+  position: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 82%;
+  height: 80vh;
+  margin-top: 20vh;
+  margin-left: 18vw;
+  font-family: roboto;
+  overflow-y: auto;
+}
+.content.small-menu {
+  width: 94.5%;
+  margin-left: 5.5%;
+}
+.content::-webkit-scrollbar {
+  width: 10px;
+}
+.content::-webkit-scrollbar-thumb {
+  background-color: #909090;
+  border-radius: 20px;
+}
+.content .video {
+  color: white;
+  min-width: 22%;
+  height: 50%;
+}
+.content .video .thumbnail {
+  width: 100%;
+  height: 60%;
+  border-radius: 0;
+  background-color: #212121;
+  transition: 0.2s;
+}
+.content .video .thumbnail:hover {
+  background-color: #313131;
+}
+.content .video .channel {
+  margin-top: 1rem;
+  display: flex;
+  font-size: 0.9rem;
+  color: #909090;
+}
+.content .video .channel .channel-text span {
+  cursor: pointer;
+}
+.content .video .channel .channel-text .channel {
+  margin-top: 0;
+}
+.content .video .channel .channel-text .channel:hover {
+  color: white;
+}
+.content .video .channel .thumbnail {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+.content .video .channel .channel-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1rem;
+}
+.content .video .channel .dot {
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  margin: 2px 4px;
+  border-radius: 50%;
+  background-color: #909090;
+}

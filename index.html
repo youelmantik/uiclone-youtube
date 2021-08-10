@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Youtube UI Clone</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="left">
+        <i class="fa fa-bars nav" id="button-for-small"></i>
+        <div class="logo" title="Youtube Home">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/800px-YouTube_full-color_icon_%282017%29.svg.png" alt="" />
+          <span>YouTube</span>
+        </div>
+      </div>
+      <div class="search">
+        <input type="text" placeholder="Search" />
+        <div class="button-search" title="Search">
+          <a href="#"><i class="fa fa-search"></i></a>
+        </div>
+        <a href="#" class="mic"><i class="fa fa-microphone"></i></a>
+      </div>
+      <div class="tools">
+        <a href="#"><i class="fa fa-video-camera"></i></a>
+        <a href="#"><i class="fa fa-bell"></i></a>
+        <div class="thumbnail">
+          <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="left-menu">
+      <div class="container-menu">
+        <div class="small">
+          <div class="menu active">
+            <i class="fa fa-home fa-lg"></i>
+            <span>Home</span>
+          </div>
+          <div class="menu">
+            <i class="fa fa-compass fa-lg"></i>
+            <span>Explore</span>
+          </div>
+          <div class="menu">
+            <i class="fa fa-youtube-play"></i>
+            <span>Subscriptions</span>
+          </div>
+          <div class="line"></div>
+          <div class="menu">
+            <i class="fa fa-play-circle-o fa-lg"></i>
+            <span>library</span>
+          </div>
+        </div>
+        <div class="section-menu library-menu">
+          <div class="menu">
+            <i class="fa fa-history fa-lg"></i>
+            <span>history</span>
+          </div>
+          <div class="menu">
+            <i class="fa fa-file-video-o fa-lg"></i>
+            <span>Your Videos</span>
+          </div>
+          <div class="menu">
+            <i class="fa fa-clock-o fa-lg"></i>
+            <span>Watch Later</span>
+          </div>
+          <div class="menu">
+            <i class="fa fa-list"></i>
+            <span>List 1</span>
+          </div>
+          <div class="menu">
+            <i class="fa fa-list"></i>
+            <span>List 2</span>
+          </div>
+          <div class="menu">
+            <i class="fa fa-list"></i>
+            <span>List 3</span>
+          </div>
+          <div class="menu">
+            <i class="fa fa-list"></i>
+            <span>List 4</span>
+          </div>
+          <div class="menu">
+            <i class="fa fa-list"></i>
+            <span>List 5</span>
+          </div>
+          <div class="menu">
+            <i class="fa fa-list"></i>
+            <span>List 6</span>
+          </div>
+          <div class="menu">
+            <i class="fa fa-list"></i>
+            <span>List 7</span>
+          </div>
+          <div class="menu">
+            <i class="fa fa-list"></i>
+            <span>List 8</span>
+          </div>
+          <div class="menu">
+            <i class="fa fa-list"></i>
+            <span>List 9</span>
+          </div>
+          <div class="menu">
+            <i class="fa fa-list"></i>
+            <span>List 10</span>
+          </div>
+        </div>
+        <div class="show-list library" id="library">
+          <i></i>
+          <span id="show-library">Show More</span>
+        </div>
+        <div class="line"></div>
+        <h3 class="subs">SUBCSRIPTIONS</h3>
+        <div class="section-menu subscriptions-menu">
+          <div class="menu">
+            <i class="fa fa-user-circle fa-lg"></i>
+            <span>Subscription 1</span>
+          </div>
+          <div class="menu">
+            <i class="fa fa-user-circle fa-lg"></i>
+            <span>Subscription 2</span>
+          </div>
+          <div class="menu">
+            <i class="fa fa-user-circle fa-lg"></i>
+            <span>Subscription 3</span>
+          </div>
+          <div class="menu">
+            <i class="fa fa-user-circle fa-lg"></i>
+            <span>Subscription 4</span>
+          </div>
+          <div class="menu">
+            <i class="fa fa-user-circle fa-lg"></i>
+            <span>Subscription 5</span>
+          </div>
+          <div class="menu">
+            <i class="fa fa-user-circle fa-lg"></i>
+            <span>Subscription 6</span>
+          </div>
+          <div class="menu">
+            <i class="fa fa-user-circle fa-lg"></i>
+            <span>Subscription 7</span>
+          </div>
+          <div class="menu">
+            <i class="fa fa-user-circle fa-lg"></i>
+            <span>Subscription 8</span>
+          </div>
+          <div class="menu">
+            <i class="fa fa-user-circle fa-lg"></i>
+            <span>Subscription 9</span>
+          </div>
+          <div class="menu">
+            <i class="fa fa-user-circle fa-lg"></i>
+            <span>Subscription 10</span>
+          </div>
+        </div>
+        <div class="show-list subscriptions" id="subscriptions">
+          <i id="show-icon"></i>
+          <span id="show-subscriptions">Show More</span>
+        </div>
+      </div>
+    </div>
+    <div class="body" id="scroll-container">
+      <!-- <div class="btn-left">
+        <i class="fa fa-chevron-left" title="previous"></i>
+      </div>
+      <div class="btn-right">
+        <i class="fa fa-chevron-right" title="next"></i>
+      </div> -->
+      <main class="body-tag" id="scroll">
+        <div class="tags">
+          <input type="radio" name="jadi" id="1" />
+          <label class="label" for="1" class="label">User Tag 1</label>
+        </div>
+        <div class="tags">
+          <input type="radio" name="jadi" id="2" />
+          <label class="label" for="2">User Tag 2</label>
+        </div>
+        <div class="tags">
+          <input type="radio" name="jadi" id="3" />
+          <label class="label" for="3">User Tag 3</label>
+        </div>
+        <div class="tags">
+          <input type="radio" name="jadi" id="4" />
+          <label class="label" for="4">User Tag 4</label>
+        </div>
+        <div class="tags">
+          <input type="radio" name="jadi" id="5" />
+          <label class="label" for="5">User Tag 5</label>
+        </div>
+        <div class="tags">
+          <input type="radio" name="jadi" id="6" />
+          <label class="label" for="6">User Tag 6</label>
+        </div>
+        <div class="tags">
+          <input type="radio" name="jadi" id="7" />
+          <label class="label" for="7">User Tag 7</label>
+        </div>
+        <div class="tags">
+          <input type="radio" name="jadi" id="8" />
+          <label class="label" for="8">User Tag 8</label>
+        </div>
+        <div class="tags">
+          <input type="radio" name="jadi" id="9" />
+          <label class="label" for="9">User Tag 9</label>
+        </div>
+        <div class="tags">
+          <input type="radio" name="jadi" id="10" />
+          <label class="label" for="10">User Tag 10</label>
+        </div>
+        <div class="tags">
+          <input type="radio" name="jadi" id="11" />
+          <label class="label" for="11">User Tag 11</label>
+        </div>
+        <div class="tags">
+          <input type="radio" name="jadi" id="12" />
+          <label class="label" for="12">User Tag 12</label>
+        </div>
+        <div class="tags">
+          <input type="radio" name="jadi" id="13" />
+          <label class="label" for="13">User Tag 13</label>
+        </div>
+        <div class="tags">
+          <input type="radio" name="jadi" id="14" />
+          <label class="label" for="14">User Tag 14</label>
+        </div>
+      </main>
+    </div>
+      <div class="content">
+        <div class="video">
+          <div class="thumbnail">
+            <span>thumbnail</span>
+          </div>
+          <div class="channel">
+            <div class="thumbnail"></div>
+            <div class="channel-text">
+              <span>Title for video</span>
+              <span class="channel">Youtube Channel</span>
+              <span>100k views  <span class="dot"></span>  Upload Time</ispan>
+            </div>
+          </div>
+        </div>
+        <div class="video">
+          <div class="thumbnail">
+            <span>thumbnail</span>
+          </div>
+          <div class="channel">
+            <div class="thumbnail"></div>
+            <div class="channel-text">
+              <span>Title for video</span>
+              <span class="channel">Youtube Channel</span>
+              <span>100k views  <span class="dot"></span>  Upload Time</ispan>
+            </div>
+          </div>
+        </div>
+        <div class="video">
+          <div class="thumbnail">
+            <span>thumbnail</span>
+          </div>
+          <div class="channel">
+            <div class="thumbnail"></div>
+            <div class="channel-text">
+              <span>Title for video</span>
+              <span class="channel">Youtube Channel</span>
+              <span>100k views  <span class="dot"></span>  Upload Time</ispan>
+            </div>
+          </div>
+        </div>
+        <div class="video">
+          <div class="thumbnail">
+            <span>thumbnail</span>
+          </div>
+          <div class="channel">
+            <div class="thumbnail"></div>
+            <div class="channel-text">
+              <span>Title for video</span>
+              <span class="channel">Youtube Channel</span>
+              <span>100k views  <span class="dot"></span>  Upload Time</ispan>
+            </div>
+          </div>
+        </div>
+        <div class="video">
+          <div class="thumbnail">
+            <span>thumbnail</span>
+          </div>
+          <div class="channel">
+            <div class="thumbnail"></div>
+            <div class="channel-text">
+              <span>Title for video</span>
+              <span class="channel">Youtube Channel</span>
+              <span>100k views  <span class="dot"></span>  Upload Time</ispan>
+            </div>
+          </div>
+        </div>
+        <div class="video">
+          <div class="thumbnail">
+            <span>thumbnail</span>
+          </div>
+          <div class="channel">
+            <div class="thumbnail"></div>
+            <div class="channel-text">
+              <span>Title for video</span>
+              <span class="channel">Youtube Channel</span>
+              <span>100k views  <span class="dot"></span>  Upload Time</ispan>
+            </div>
+          </div>
+        </div>
+        <div class="video">
+          <div class="thumbnail">
+            <span>thumbnail</span>
+          </div>
+          <div class="channel">
+            <div class="thumbnail"></div>
+            <div class="channel-text">
+              <span>Title for video</span>
+              <span class="channel">Youtube Channel</span>
+              <span>100k views  <span class="dot"></span>  Upload Time</ispan>
+            </div>
+          </div>
+        </div>
+        <div class="video">
+          <div class="thumbnail">
+            <span>thumbnail</span>
+          </div>
+          <div class="channel">
+            <div class="thumbnail"></div>
+            <div class="channel-text">
+              <span>Title for video</span>
+              <span class="channel">Youtube Channel</span>
+              <span>100k views  <span class="dot"></span>  Upload Time</ispan>
+            </div>
+          </div>
+        </div>
+        <div class="video">
+          <div class="thumbnail">
+            <span>thumbnail</span>
+          </div>
+          <div class="channel">
+            <div class="thumbnail"></div>
+            <div class="channel-text">
+              <span>Title for video</span>
+              <span class="channel">Youtube Channel</span>
+              <span>100k views  <span class="dot"></span>  Upload Time</ispan>
+            </div>
+          </div>
+        </div>
+        <div class="video">
+          <div class="thumbnail">
+            <span>thumbnail</span>
+          </div>
+          <div class="channel">
+            <div class="thumbnail"></div>
+            <div class="channel-text">
+              <span>Title for video</span>
+              <span class="channel">Youtube Channel</span>
+              <span>100k views  <span class="dot"></span>  Upload Time</ispan>
+            </div>
+          </div>
+        </div>
+        <div class="video">
+          <div class="thumbnail">
+            <span>thumbnail</span>
+          </div>
+          <div class="channel">
+            <div class="thumbnail"></div>
+            <div class="channel-text">
+              <span>Title for video</span>
+              <span class="channel">Youtube Channel</span>
+              <span>100k views  <span class="dot"></span>  Upload Time</ispan>
+            </div>
+          </div>
+        </div>
+        <div class="video">
+          <div class="thumbnail">
+            <span>thumbnail</span>
+          </div>
+          <div class="channel">
+            <div class="thumbnail"></div>
+            <div class="channel-text">
+              <span>Title for video</span>
+              <span class="channel">Youtube Channel</span>
+              <span>100k views  <span class="dot"></span>  Upload Time</ispan>
+            </div>
+          </div>
+        </div>
+        <div class="video">
+          <div class="thumbnail">
+            <span>thumbnail</span>
+          </div>
+          <div class="channel">
+            <div class="thumbnail"></div>
+            <div class="channel-text">
+              <span>Title for video</span>
+              <span class="channel">Youtube Channel</span>
+              <span>100k views  <span class="dot"></span>  Upload Time</ispan>
+            </div>
+          </div>
+        </div>
+        <div class="video">
+          <div class="thumbnail">
+            <span>thumbnail</span>
+          </div>
+          <div class="channel">
+            <div class="thumbnail"></div>
+            <div class="channel-text">
+              <span>Title for video</span>
+              <span class="channel">Youtube Channel</span>
+              <span>100k views  <span class="dot"></span>  Upload Time</ispan>
+            </div>
+          </div>
+        </div>
+        <div class="video">
+          <div class="thumbnail">
+            <span>thumbnail</span>
+          </div>
+          <div class="channel">
+            <div class="thumbnail"></div>
+            <div class="channel-text">
+              <span>Title for video</span>
+              <span class="channel">Youtube Channel</span>
+              <span>100k views  <span class="dot"></span>  Upload Time</ispan>
+            </div>
+          </div>
+        </div>
+        <div class="video">
+          <div class="thumbnail">
+            <span>thumbnail</span>
+          </div>
+          <div class="channel">
+            <div class="thumbnail"></div>
+            <div class="channel-text">
+              <span>Title for video</span>
+              <span class="channel">Youtube Channel</span>
+              <span>100k views  <span class="dot"></span>  Upload Time</ispan>
+            </div>
+          </div>
+        </div>
+      </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.mousewheel.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
